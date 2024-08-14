@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import { getCabins } from "../_lib/data-service";
 import CabinCard from "../components/CabinCard";
 import Counter from "./Counter";
 
@@ -6,9 +7,10 @@ export const metadata = {
   title: "Cabins",
 };
 
-export default function Page() {
+export default async function Page() {
   // CHANGE
-  const cabins = [];
+  const cabins = await getCabins();
+  console.log(cabins);
 
   return (
     <div>
