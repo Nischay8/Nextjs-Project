@@ -1,5 +1,5 @@
+import MainHeader from '@/components/main-header/main-header';
 import './globals.css';
-import MainHeader from './components/main-header/main-header';
 
 export const metadata = {
   title: 'NextLevel Food',
@@ -10,7 +10,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <MainHeader/>
+        
+        <MainHeader />
         {children}
       </body>
     </html>
