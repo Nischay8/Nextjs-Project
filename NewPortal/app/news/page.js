@@ -1,3 +1,3 @@
-export default function News(){
+export default function NewsPage(){
     return <>News Page</>
 }
