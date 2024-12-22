@@ -4,9 +4,9 @@ import { notFound } from "next/navigation";
 export default function NewsDetailPage({params}){
 
    const newsSlug=params.slug;
-   console.log(newsSlug);
+//    console.log(newsSlug);
    const newsItem=DUMMY_NEWS.find(newsIte=>newsIte.slug===newsSlug);
-   console.log(newsItem);
+//    console.log(newsItem);
 
    if(!newsItem) {
     notFound();
