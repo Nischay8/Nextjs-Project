@@ -1,8 +1,4 @@
 import Hello from "@/app/components/hello";
-
-
-
-
 export default function Home() {
   console.log("I am Server Components!");
 
