@@ -1,7 +1,7 @@
 "use server";
 
 import { auth } from "@/auth";
-import { parseServerActionResponse } from "@/lib/utils";
+import { parseServerActionResponse } from "@/app/lib/utils";
 import slugify from "slugify";
 import { writeClient } from "@/sanity/lib/write-client";
 
