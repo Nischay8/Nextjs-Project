@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use server";
 
 import { auth } from "@/auth";
 import { parseServerActionResponse } from "@/app/lib/utils";
 import slugify from "slugify";
-import { writeClient } from "@/sanity/lib/write-client";
+// import { writeClient } from "@/sanity/lib/write-client";
 
 export const createPitch = async (
   state: any,
@@ -36,12 +37,13 @@ export const createPitch = async (
       },
       author: {
         _type: "reference",
-        _ref: session?.id,
+        _ref: session,
       },
       pitch,
     };
 
-    const result = await writeClient.create({ _type: "startup", ...startup });
+    const result = {};
+    //  await writeClient.create({ _type: "startup", ...startup });
 
     return parseServerActionResponse({
       ...result,
