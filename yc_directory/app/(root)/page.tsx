@@ -15,6 +15,12 @@ export default async function Home({searchParams}: {searchParams: Promise<{ quer
 
    <SearchForm  query={query}/>
    </section>
+
+   <section className="section_container">
+    <p className="text-30-semibold">
+      {query ? `Search Result for "${query}"`:'All startups'}
+    </p>
+   </section>
    </>
   );
 }
