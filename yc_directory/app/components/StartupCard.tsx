@@ -35,6 +35,9 @@ const StartupCard = ({posts}:any) => {
     </Link>
     </div>
 
+    <Link href={`/startup/${posts._id}`}>
+    
+    </Link>
    </li>
   )
 }
