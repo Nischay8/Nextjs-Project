@@ -3,6 +3,7 @@ import { formatDate } from '../lib/utils'
 import { EyeIcon } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Button } from './ui/button'
 const StartupCard = ({posts}:any) => {
   return (
    <li className='startup-card group'>
@@ -36,8 +37,27 @@ const StartupCard = ({posts}:any) => {
     </div>
 
     <Link href={`/startup/${posts._id}`}>
-    
+    <p className="startup-card_desc">
+        {posts.description}
+    </p>
+
+   <img src={posts.image} alt='placeholder' className='startup-card_img'/>
     </Link>
+
+    <div className='flex-between gap-3 mt-5'>
+    <Link href={`/?query=${posts.category.toLowerCase()}`}>
+    <p className='text-16-medium'>
+        {posts.category}
+    </p>
+    </Link>
+
+    <Button className='startup-card_btn' asChild>
+        <Link href={`/startup/${posts._id}`}>
+        
+        Details</Link>
+
+    </Button>
+    </div>
    </li>
   )
 }
